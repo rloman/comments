@@ -1,4 +1,4 @@
-package nl.carpago.util;
+package nl.carpago.comments.util;
 
 import java.sql.Connection;
 import java.sql.Date;

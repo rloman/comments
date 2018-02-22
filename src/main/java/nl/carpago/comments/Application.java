@@ -1,8 +1,8 @@
-package nl.carpago;
+package nl.carpago.comments;
 
 import java.sql.SQLException;
 
-import nl.carpago.util.MySQLAccess;
+import nl.carpago.comments.util.MySQLAccess;
 
 public class Application {
 
