@@ -1,12 +1,13 @@
 package nl.carpago.util;
 
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.Date;
+import java.time.LocalDate;
 
 public class MySQLAccess {
    private Connection connect = null;
@@ -38,7 +39,11 @@ public class MySQLAccess {
            preparedStatement.setString(1, "Test");
            preparedStatement.setString(2, "TestEmail");
            preparedStatement.setString(3, "TestWebpage");
-           preparedStatement.setDate(4, new java.sql.Date(2009, 12, 11));
+           
+           LocalDate birthDay = LocalDate.of(1968, 8, 9);
+           Date birthDayAsSqlDate = Date.valueOf(birthDay);
+           preparedStatement.setDate(4, birthDayAsSqlDate);
+           
            preparedStatement.setString(5, "TestSummary");
            preparedStatement.setString(6, "TestComment");
            preparedStatement.executeUpdate();
