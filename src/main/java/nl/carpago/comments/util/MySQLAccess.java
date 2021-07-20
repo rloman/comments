@@ -22,7 +22,7 @@ public class MySQLAccess {
          // Setup the connection with the DB
          connect = DriverManager
                            .getConnection("jdbc:mysql://localhost/feedback?"
-                                             + "user=rloman&password=bloemen");
+                                             + "user=username&password=password");
 
          // Statements allow to issue SQL queries to the database
          statement = connect.createStatement();
